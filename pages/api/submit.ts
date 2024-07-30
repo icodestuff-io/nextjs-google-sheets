@@ -50,7 +50,7 @@ export default async function handler(
         return res.status(201).json({
             data: response.data
         })
-    }catch (e) {
+    }catch (e:any) {
         return res.status(e.code).send({message: e.message})
     }
 
